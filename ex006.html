@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Eventos DOM</title>
+	<style type="text/css">
+		div#area {
+			font:normal 20pt Arial;
+			background: rgb(42, 139, 42);
+			color: white;
+			width: 200px;
+			height: 200px;
+			line-height: 200px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="area">
+		interaja
+	</div>
+	
+	<!--para configurar eventos no HTML: 
+		<div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> 
+		-->
+		
+	<script type="text/javascript">
+		var a = window.document.getElementById('area')
+		//armazena na variável 'a' o conteudo do ID 'area'
+
+		a.addEventListener('click', clicar)
+		a.addEventListener('mouseenter', entrar)
+		a.addEventListener('mouseout', sair)
+		//Configura os eventos click, mouseenter e mouseout com as funções 'clicar', 'entrar' e 'sair'
+
+		function clicar() {
+			a.innerText='Clicou!'
+			//o innerText vai mudar o conteúdo  da variável 'a' para 'clicou'
+			a.style.background= 'red'
+		}
+
+		function entrar(){
+			a.innerText = 'Entrou!'
+			//o innerText vai mudar o conteúdo  da variável 'a' para 'Entrou'
+		}
+
+		function sair(){
+			a.innerText = 'Saiu!'
+			//o innerText vai mudar o conteúdo  da variável 'a' para 'Saiu'
+			a.style.background='green'
+		}
+	</script>
+</body>
+</html>

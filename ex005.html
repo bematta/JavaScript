@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>DOM</title>
+	<style type="text/css">
+		body {
+		background: rgb(68, 125, 199);
+		color:white;
+		font:normal;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Estudos DOM</h1>
+	<p>Aqui vai o resultado</p>
+	<p>Aprendendo a usar o <strong>DOM</strong> em JavaScript (modelo de objetos pra documentos)</p>
+	<div id="msg">Clique em mim</div>
+
+	<script type="text/javascript">
+		var corpo = window.document.body
+		corpo.style.background = 'black'
+		var p1 = window.document.getElementsByTagName('p')[0] //pegando só o p 0 (o primeiro parágrafo p, se eu quiser todos os p, não utilizar colchetes)
+		window.document.write('Está escrito assim: ' + p1.innerText) //tag.innerText repete o texto da variável t1
+		p1.style.color = 'orange'
+		var d = window.document.getElementById ('msg')
+		d.style.background = 'green'
+	</script>
+</body>
+</html>
