@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Consulado Brasileiro</title>
+</head>
+<body>
+	<h2>Qual o seu país de origem?</h2>
+	<input type="text" name="pais" id="pais">
+	<input type="button" name="Confirmar" value="Confirmar" onclick="clicar()">
+
+	<div id="resultado">
+	</div>
+
+	<script type="text/javascript">
+		function clicar(){
+			var paisp = window.document.getElementById('pais')
+			var resultado = window.document.getElementById('resultado')
+			var paistxt = String(paisp.value)
+		
+			resultado.innerHTML = `Você nasceu em ${pais}`
+			
+			if (paistxt.toLowerCase() =='brasil') {
+				resultado.innerHTML = '<br/>Você é Brasileiro(a)!'
+			} else {
+				resultado.innerHTML = '</br>Você é estrangeiro(a)!'
+			}
+		}
+	</script>
+</body>
+</html>
