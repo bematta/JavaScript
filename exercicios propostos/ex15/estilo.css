@@ -17,8 +17,8 @@ section {
 	box-shadow: 3px 3px 10px grey;
 }
 
-div {
-
+div#res {
+	text-align: center;
 }
 
 footer {

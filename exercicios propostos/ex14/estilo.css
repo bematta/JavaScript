@@ -17,11 +17,15 @@ section {
 	box-shadow: 3px 3px 10px grey;
 }
 
-img#imagem{ 
-width: 250px;  
-height: 250px;
-border-radius: 50%;
+div {
+	text-align: center;
+	padding: 8px;
+}
 
+img#imagem { 
+	width: 250px;  
+	height: 250px;
+	border-radius: 50%;
 }
 
 footer {
